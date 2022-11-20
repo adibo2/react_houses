@@ -1,0 +1,42 @@
+@import "./../typography.scss";
+@import "./../base.scss";
+
+.features {
+    //background-color: #6D5D4B;
+    grid-column: 3/11;
+    margin: 15rem 0;
+    display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-gap: 6rem;
+    align-items: start;
+
+    @include respons(medium) {
+        grid-column: 2/10;
+    }
+
+}
+
+.feature {
+    display: grid;
+
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+
+    &__icon {
+
+        fill: olive;
+        height: 4.5rem;
+        width: 4.5rem;
+        transform: translateY(-1rem);
+        grid-row: 1 / span 2;
+
+
+    }
+
+    &__text {
+        font-size: 1.5rem;
+
+    }
+}

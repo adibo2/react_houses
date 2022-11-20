@@ -1,0 +1,63 @@
+%heading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 4rem;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-style: italic;
+    font-size: 4rem;
+    // padding: 4rem;
+
+    &--light {
+        color: #f9f7f6;
+    }
+
+    &--dark {
+        color: #54483A;
+    }
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 1.6rem;
+    color: #c69963;
+    text-transform: uppercase
+}
+
+.heading-4 {
+    @extend %heading;
+    font-size: 1.6rem;
+
+
+
+
+    &--light {
+        color: #f9f7f6;
+    }
+
+    &--dark {
+        color: #54483A;
+    }
+}
+
+.btn {
+    background-color: #c69963;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        background-color: #B28451;
+    }
+}

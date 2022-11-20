@@ -1,0 +1,48 @@
+@import "./../base.scss";
+.realtors {
+    background-color: #101d2c;
+    grid-column: 9/-1;
+    // grid-column: col-start 7 / full-end;
+    display: grid;
+    align-content: center;
+    padding: 3rem;
+    justify-content: center;
+    grid-row-gap: 2rem;
+    justify-items: center;
+    @include respons(small) {
+        grid-column: 1/-1;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: min-content max-content;
+        grid-column-gap: 2rem;
+        grid-row-gap: 5vh;
+        align-items: center;
+
+        @include respons(small) {
+            grid-template-columns:repeat(3,min-content max-content);
+
+        }
+        
+        @include respons(phone) {
+            grid-template-columns: min-content max-content;
+
+        }
+
+
+
+    }
+
+    &__img {
+        width: 7rem;
+        border-radius: 50%;
+        display: block;
+    }
+
+    &__sold {
+        text-transform: uppercase;
+        color: #aaa;
+        margin-top: -3px;
+    }
+}

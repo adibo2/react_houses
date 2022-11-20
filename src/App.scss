@@ -1,0 +1,28 @@
+@import "./base.scss";
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: 8rem minmax(6rem, 1fr) repeat(8, minmax(min-content, 10rem)) minmax(6rem, 1fr);
+  // display: grid;
+  // grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  // grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+  // display: grid;
+  // grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  // grid-template-columns: 8rem minmax(6rem, 1fr) repeat(8, minmax(min-content, 10rem)) minmax(6rem, 1fr);
+  @include respons(medium) {
+    display: grid;
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 10rem)) minmax(6rem, 1fr);
+  }
+  @include respons(small){
+    display: grid;
+    grid-template-rows:6rem calc(100vh - 6rem); 
+    //new line realtors and header all page //kml b min-content ola automatique placement
+  }
+
+
+
+
+}

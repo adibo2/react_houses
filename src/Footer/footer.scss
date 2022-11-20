@@ -1,0 +1,49 @@
+@import "./../base.scss";
+
+.footer {
+    background-color: #252525;
+    grid-column: 2/-1;
+    padding: 8rem;
+
+    @include respons(medium) {
+        grid-column: 1/-1;
+    }
+}
+
+.nav {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+
+    &__link {
+        font-size: 1.4rem;
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        display: block;
+        padding: 1.2rem;
+        transition: all .3s;
+
+        &:hover,
+        &:active {
+            transform: translateY(-3px);
+            background-color: rgba($color: #fff, $alpha: .4);
+
+
+        }
+    }
+}
+
+.copyright {
+    font-size: 1.4rem;
+    color: #aaa;
+    margin-top: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}

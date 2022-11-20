@@ -1,0 +1,50 @@
+@import "./../base.scss";
+
+.sidebar {
+    background-color: lightgreen;
+    grid-column: 1/2;
+    // grid-column: sidebar-start / sidebar-end;
+    grid-row: 1/-1;
+    display: flex;
+    justify-content: center;
+
+    @include respons(medium) {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        align-items: center;
+        justify-content: end;
+    }
+}
+
+.nav-btn {
+    border: none;
+    border-radius: 0;
+
+    background-color: #fff;
+    height: 2px;
+    width: 4.5rem;
+    margin-top: 4rem;
+
+
+    &::after,
+    &::before {
+        content: "";
+        background-color: #fff;
+        height: 2px;
+        width: 4.5rem;
+        display: block;
+    }
+
+    &::before {
+        transform: translateY(-1.5rem);
+    }
+
+    &::after {
+        transform: translateY(1.3rem);
+    }
+
+    @include respons(medium) {
+        margin-top: 0;
+        margin-right: 1rem;
+    }
+}

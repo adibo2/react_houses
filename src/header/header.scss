@@ -1,0 +1,73 @@
+@import "./../base.scss";
+
+.header {
+    // background-color: brown;
+    grid-column: 2/9;
+    // grid-column: full-start / col-end 6;
+    background-image: linear-gradient(rgba(#101d2c, .95), rgba(#101d2c, .95)), url("./../img/bgimg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 8rem;
+    padding-top: 4rem;
+    display: grid;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+    grid-row-gap: 1.5rem;
+    //media
+    grid-template-columns: minmax(min-content, max-content);
+    justify-content: center;
+
+    @include respons(medium) {
+        grid-column: 1/9;
+    }
+    @include respons(small) {
+        grid-column: 1/-1;
+    }
+    @include respons(phone) {
+        padding: 4rem;
+    }
+
+
+    &__logo {
+        // width: 100%;
+        height: 4rem;
+        width: 4rem;
+        justify-self: center;
+    }
+
+    &__btn {
+        align-self: start;
+        // padding: 2rem;
+        justify-self: start;
+    }
+
+    &__seenon-text {
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: center;
+        font-size: 1.5rem;
+        color: #aaa;
+
+        &::after,
+        &::before {
+            content: "";
+            height: 1px;
+            display: block;
+            background-color: currentColor;
+        }
+    }
+
+    &__seenon-logos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 3rem;
+        justify-items: center;
+
+        img {
+            max-height: 2rem;
+            max-width: 100%;
+            background-color: #101d2c;
+            filter: blur(70%);
+        }
+    }
+}
